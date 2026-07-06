@@ -1,0 +1,182 @@
+/* General styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #00c6ff, #0072ff); /* Vibrant blue gradient */
+}
+
+* {
+    color: white;
+}
+
+/* Header styling */
+header {
+    background-color: #1e3c72; /* Deep blue background */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #ff6347; /* Bright red hover effect */
+}
+
+.nav-links .button {
+    background-color: #ff6347; /* Tomato red background for buttons */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links .button:hover {
+    background-color: #ff4500; /* Darker red on hover */
+}
+
+/* Hero section */
+.hero {
+    background: linear-gradient(to right, #fc5c7d, #6a82fb); /* Pink to purple gradient */
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: white;
+    color: #fc5c7d; /* Pinkish CTA button */
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #6a82fb; /* Purple hover for CTA button */
+    color: white;
+}
+
+/* Section styling */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    background: #2f3b52; /* Dark blue-gray background for sections */
+    border-radius: 20px;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff6347; /* Tomato red for section headers */
+}
+
+section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.feature {
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.contact-button {
+    background-color: #ff6347;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #ff4500; /* Darker red for hover */
+}
+
+/* Input group styling */
+.input-group {
+    width: 30%;
+    position: relative;
+    left: 35%;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    background-color: #f0f1f6; /* Light grayish background */
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus {
+    border-color: #ff6347; /* Red border on focus */
+    outline: none;
+}
+
+/* Footer styling */
+footer {
+    background-color: #1e3c72; /* Deep blue footer */
+    color: white;
+    text-align: center;
+    padding: 20px 40px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+}

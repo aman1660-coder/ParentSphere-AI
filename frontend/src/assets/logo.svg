@@ -1,0 +1,20 @@
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sphere" x1="18" y1="22" x2="136" y2="140" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="48" y1="30" x2="112" y2="130" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity=".55"/>
+    </linearGradient>
+  </defs>
+  <circle cx="80" cy="80" r="68" fill="url(#sphere)"/>
+  <circle cx="80" cy="80" r="58" stroke="white" stroke-opacity=".28" stroke-width="2"/>
+  <path d="M39 92C45 68 60 54 80 54C100 54 115 68 121 92" stroke="url(#glow)" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="66" cy="66" r="13" fill="white" fill-opacity=".94"/>
+  <circle cx="96" cy="70" r="9" fill="white" fill-opacity=".9"/>
+  <path d="M49 118C55 97 65 86 80 86C95 86 105 97 111 118" fill="white" fill-opacity=".92"/>
+  <path d="M81 117C85 101 93 94 104 94C116 94 124 103 128 120" fill="white" fill-opacity=".68"/>
+  <path d="M52 35C63 28 79 24 94 28" stroke="white" stroke-opacity=".55" stroke-width="5" stroke-linecap="round"/>
+</svg>

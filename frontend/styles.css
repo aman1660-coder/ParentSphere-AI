@@ -1,0 +1,103 @@
+/* Background and container styling */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#logo {
+    height: 150px;
+    width: 150px;
+    position: fixed;
+    top: 0%;
+    left: 10%;
+    display: inline-block;
+    background-image: url(IMG_20240611_111340.jpg);
+    background-size: contain;
+}
+
+#slogan {
+    position: relative;
+    left: 220%;
+    top: -20%;
+    color: white;
+    font-size: 30px;
+    display: inline-block;
+    width: 1500px;
+}
+
+header {
+    background: linear-gradient(to right, #fc5c7d, #6a82fb); /* Pink to purple gradient */
+}
+
+.background {
+    background: linear-gradient(to right, #fc5c7d, #6a82fb); /* Pink to purple gradient */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for the login container */
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    color: white;
+}
+
+.title {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: white; /* Title color set to white for contrast */
+}
+
+/* Form styling */
+.login-form .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.login-form .input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #ccc; /* Lighter label color for contrast */
+}
+
+.login-form .input-group input {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f4f4f4; /* Light gray input field */
+    color: #333; /* Dark text for input fields */
+}
+
+.login-form .input-group input:focus {
+    border-color: #fc5c7d; /* Pinkish focus border */
+    outline: none;
+    box-shadow: 0 0 8px rgba(252, 92, 125, 0.2); /* Pink shadow for focus effect */
+}
+
+/* Button styling */
+.login-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fc5c7d; /* Pinkish background for the login button */
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #6a82fb; /* Purple background on hover */
+}

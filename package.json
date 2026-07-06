@@ -1,0 +1,25 @@
+{
+  "name": "parentsphere",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Parentsphere - Intelligent Parenting & Child Development Platform",
+  "workspaces": [
+    "frontend",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w server\" \"npm run dev -w frontend\"",
+    "start": "npm run start -w server",
+    "build": "npm run build -w frontend",
+    "seed": "npm run seed -w server",
+    "lint": "npm run lint -w frontend",
+    "install:all": "npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.18.0",
+    "npm": ">=9.0.0"
+  }
+}

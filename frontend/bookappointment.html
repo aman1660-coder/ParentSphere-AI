@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Book Appointment</title>
+
+<style>
+body{
+margin:0;
+background:#0f2027;
+color:white;
+font-family:sans-serif;
+text-align:center;
+}
+
+.container{
+margin-top:50px;
+}
+
+.doctors{
+display:flex;
+justify-content:center;
+gap:20px;
+margin:20px;
+}
+
+.card{
+background:#203a43;
+padding:20px;
+border-radius:10px;
+cursor:pointer;
+}
+
+.hidden{
+display:none;
+}
+
+input,select,button{
+margin:10px;
+padding:10px;
+border-radius:5px;
+border:none;
+}
+
+button{
+background:#00eaff;
+cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Book Appointment</h1>
+
+<div class="container">
+
+<h3>Select Doctor</h3>
+
+<div class="doctors">
+<div class="card" onclick="selectDoctor('Dr. Aditi Sharma')">
+Dr. Aditi Sharma <br> Family Therapy
+</div>
+
+<div class="card" onclick="selectDoctor('Bharati K Trivedi')">
+Bharati K Trivedi <br> Child Psychology
+</div>
+
+<div class="card" onclick="selectDoctor('Dr. Rajesh Singh')">
+Dr. Rajesh Singh <br> Career Guidance
+</div>
+</div>
+
+<div id="dateBox" class="hidden">
+<h3>Select Date</h3>
+<input type="date" id="date" onchange="showTime()">
+</div>
+
+<div id="timeBox" class="hidden">
+<h3>Select Time</h3>
+<select id="time">
+<option>10AM</option>
+<option>12PM</option>
+<option>3PM</option>
+</select>
+
+<br>
+
+<button onclick="book()">Proceed to Payment</button>
+</div>
+
+</div>
+
+<script>
+
+let selectedDoctor = "";
+
+function selectDoctor(name){
+selectedDoctor = name;
+document.getElementById("dateBox").style.display="block";
+}
+
+function showTime(){
+document.getElementById("timeBox").style.display="block";
+}
+
+async function book(){
+
+const user = JSON.parse(localStorage.getItem("user"));
+
+if(!user){
+alert("Login first");
+window.location.href="index.html";
+return;
+}
+
+const date = document.getElementById("date").value;
+const time = document.getElementById("time").value;
+
+if(!selectedDoctor || !date){
+alert("Complete steps");
+return;
+}
+
+alert("Payment Successful ✅");
+
+await fetch("http://localhost:5000/api/appointments",{
+method:"POST",
+headers:{"Content-Type":"application/json"},
+body:JSON.stringify({
+parentName: user.name,
+email: user.email,
+doctorName: selectedDoctor,
+date,
+time
+})
+});
+
+alert("Booked 🎉");
+window.location.href="appointments.html";
+
+}
+
+</script>
+
+</body>
+</html>
