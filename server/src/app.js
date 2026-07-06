@@ -25,20 +25,69 @@ import videoRoutes from './routes/videoRoutes.js';
 
 const app = express();
 
-app.use(helmet());
+/* =====================================================
+   CORS CONFIGURATION
+===================================================== */
+
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://parent-sphere-ai-frontend.vercel.app'
+];
+
 app.use(
   cors({
-    origin: env.clientUrl,
-    credentials: true
+    origin: (origin, callback) => {
+      // Allow requests with no origin, such as Postman
+      if (!origin) {
+        return callback(null, true);
+      }
+
+      // Allow production frontend and localhost
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      console.log('Blocked by CORS:', origin);
+
+      return callback(new Error('Not allowed by CORS'));
+    },
+
+    credentials: true,
+
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+
+    allowedHeaders: ['Content-Type', 'Authorization']
   })
 );
+
+/* =====================================================
+   SECURITY MIDDLEWARE
+===================================================== */
+
+app.use(helmet());
+
 app.use(express.json({ limit: '1mb' }));
-app.use(express.urlencoded({ extended: true }));
+
+app.use(
+  express.urlencoded({
+    extended: true
+  })
+);
+
 app.use(cookieParser());
+
 app.use(compression());
+
 app.use(mongoSanitize());
+
 app.use(hpp());
+
 app.use(sanitizeBody);
+
+/* =====================================================
+   RATE LIMITING
+===================================================== */
+
 app.use(
   rateLimit({
     windowMs: 15 * 60 * 1000,
@@ -48,26 +97,59 @@ app.use(
   })
 );
 
-if (env.nodeEnv !== 'test') app.use(morgan('dev'));
+/* =====================================================
+   LOGGING
+===================================================== */
+
+if (env.nodeEnv !== 'test') {
+  app.use(morgan('dev'));
+}
+
+/* =====================================================
+   HEALTH CHECK
+===================================================== */
 
 app.get('/api/health', (_req, res) => {
-  res.json({ success: true, message: 'Parentsphere API is healthy' });
+  res.json({
+    success: true,
+    message: 'Parentsphere API is healthy'
+  });
 });
 
+/* =====================================================
+   API ROUTES
+===================================================== */
+
 app.use('/api/auth', authRoutes);
+
 app.use('/api/ai', aiRoutes);
+
 app.use('/api/children', childRoutes);
+
 app.use('/api/counsellors', counsellorRoutes);
+
 app.use('/api/appointments', appointmentRoutes);
+
 app.use('/api/payments', paymentRoutes);
+
 app.use('/api/books', bookRoutes);
+
 app.use('/api/articles', articleRoutes);
+
 app.use('/api/videos', videoRoutes);
+
 app.use('/api/forum', forumRoutes);
+
 app.use('/api', contactRoutes);
+
 app.use('/api/admin', adminRoutes);
 
+/* =====================================================
+   ERROR HANDLING
+===================================================== */
+
 app.use(notFound);
+
 app.use(errorHandler);
 
 export default app;
