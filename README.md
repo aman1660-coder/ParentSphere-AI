@@ -1,404 +1,610 @@
-# ParentSphere AI
+<div align="center">
 
-### AI-Powered Parenting, Child Development & Counselling Platform
+# 👨‍👩‍👧‍👦 ParentSphere
 
-ParentSphere AI is a full-stack web platform designed to support parents throughout different stages of child development. It combines AI-powered parenting guidance, child growth tracking, professional counselling, appointment booking, digital resources, community interaction, and role-based dashboards in a single application.
+### AI-Powered Parenting Support & Child Development Platform
 
-The platform is built using the MERN stack and integrates AI assistance, secure authentication, payment processing, email notifications, analytics, and interactive data visualization.
+**A production-deployed full-stack MERN application that brings AI-powered parenting guidance, child growth tracking, professional counselling, educational resources, appointment management, and community support into one unified digital platform.**
 
----
+<br>
 
-## Application Preview
+[![Live Demo](https://img.shields.io/badge/🚀_LIVE_DEMO-Visit_ParentSphere-7C3AED?style=for-the-badge)](https://parent-sphere-ai-frontend.vercel.app/)
 
-### Home Page
+<br>
 
-The landing page introduces ParentSphere AI and provides quick access to counselling, educational resources, AI-powered guidance, and the parenting community.
+![MERN Stack](https://img.shields.io/badge/MERN-Full_Stack-00C853?style=flat-square)
+![React](https://img.shields.io/badge/React-Frontend-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-Backend-339933?style=flat-square&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-REST_API-000000?style=flat-square&logo=express)
+![MongoDB](https://img.shields.io/badge/MongoDB_Atlas-Database-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-Frontend_Deployment-000000?style=flat-square&logo=vercel)
+![Render](https://img.shields.io/badge/Render-Backend_Deployment-46E3B7?style=flat-square)
+![JWT](https://img.shields.io/badge/JWT-Authentication-000000?style=flat-square&logo=jsonwebtokens)
+![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
 
-![ParentSphere AI Home Page](docs/screenshots/home.png)
+<br>
 
----
+### 🌐 [View Live Application](https://parent-sphere-ai-frontend.vercel.app/)
 
-### Parent Dashboard
-
-The personalized parent dashboard provides an overview of children, appointments, payments, saved resources, recent AI conversations, and growth information.
-
-![Parent Dashboard](docs/screenshots/parent-dashboard.png)
-
----
-
-### AI Parenting Assistant
-
-The AI-powered parenting assistant provides contextual guidance for questions related to child behaviour, learning, nutrition, routines, emotional well-being, and parenting challenges.
-
-![AI Parenting Assistant](docs/screenshots/ai-assistant.png)
+</div>
 
 ---
 
-### Child Growth Tracker
+## 📌 About ParentSphere
 
-Parents can create child profiles, record height and weight, monitor development through interactive charts, and generate AI-powered guidance based on child information.
+**ParentSphere** is a full-stack parenting support and child development platform designed to solve a real-world problem: parents often need to use multiple disconnected applications for counselling, child development tracking, educational resources, parenting guidance, and community interaction.
 
-![Child Growth Tracker](docs/screenshots/child-tracker.png)
+ParentSphere brings these services together into a single, modern, and user-friendly platform.
 
----
+The application allows parents to:
 
-### Digital Book Library
+- 🤖 Receive AI-powered parenting guidance
+- 👶 Create and manage child profiles
+- 📈 Track child growth and development
+- 👩‍⚕️ Discover professional counsellors
+- 📅 Book and manage counselling appointments
+- 💳 Track counselling payments
+- 📚 Access parenting books and educational resources
+- 📰 Read practical parenting articles
+- 💬 Participate in community discussions
+- 🎥 Watch parenting courses, webinars, and child development videos
+- 📊 Access a personalized parent dashboard
 
-The resource library provides curated parenting and child-development books with category filtering, search functionality, reading access, and bookmark support.
-
-![Digital Book Library](docs/screenshots/books-library.png)
-
----
-
-### Community Forum
-
-Parents can create posts, ask questions, share experiences, comment on discussions, and interact with other members of the ParentSphere community.
-
-![Community Forum](docs/screenshots/community-forum.png)
-
----
-
-### Counsellor Directory
-
-Parents can discover professional counsellors, explore their specializations, experience, ratings, consultation modes, and fees before scheduling appointments.
-
-![Counsellor Directory](docs/screenshots/counsellors.png)
+The application follows a modern **MERN stack architecture** and is deployed using independent frontend, backend, and cloud database services.
 
 ---
 
-### Appointment Booking & Payment
+# 🚀 Live Application
 
-The booking system allows parents to select consultation dates, available time slots, add notes for counsellors, and complete the payment process.
+<div align="center">
 
-![Appointment Booking](docs/screenshots/appointment-booking.png)
+## [🌐 Launch ParentSphere](https://parent-sphere-ai-frontend.vercel.app/)
 
----
+**Frontend:** Deployed on Vercel  
+**Backend:** Deployed on Render  
+**Database:** MongoDB Atlas
 
-### Booking Confirmation
-
-After successful payment and appointment creation, the platform generates a confirmation containing the consultation date, time, and meeting information.
-
-![Booking Confirmation](docs/screenshots/booking-confirmation.png)
+</div>
 
 ---
 
-### Appointment Management
+# 📸 Application Preview
 
-Parents can manage their counselling appointments and access booking status, payment details, schedules, and meeting links from a centralized dashboard.
+## 🏠 Modern Landing Page
 
-![Appointments Dashboard](docs/screenshots/appointments-dashboard.png)
+ParentSphere provides a modern and responsive landing page introducing users to the platform and its major parenting support services.
+
+The landing page highlights the platform's core objective of empowering parents through AI guidance, professional counselling, child development tools, expert resources, and community support.
+
+![ParentSphere Home Page](docs/screenshots/01-home-page.png)
 
 ---
 
-## Key Features
+## 🔐 Secure User Authentication
 
-### AI-Powered Parenting Assistance
+ParentSphere provides secure user authentication with account registration and login functionality.
 
-- Context-aware parenting guidance
-- AI responses for behaviour, education, nutrition, routines, and emotional well-being
-- Child-profile-based contextual recommendations
-- OpenAI API integration
-- Built-in fallback assistant when an API key is unavailable
-- AI-powered child development guidance
+The authentication system enables personalized platform access and supports different application roles.
 
-### Child Development Tracking
+### Authentication Features
 
-- Create and manage child profiles
-- Record height and weight information
-- Track child development over time
-- Interactive growth visualization
-- Store interests and behavioural observations
-- Generate personalized AI recommendations
-
-### Authentication & Authorization
-
-- User registration and login
+- User registration
+- Secure login
+- Password protection
 - JWT-based authentication
-- Access and refresh token architecture
-- Role-Based Access Control (RBAC)
-- Parent dashboard
-- Counsellor dashboard
-- Admin dashboard
-- Email verification
-- Forgot and reset password functionality
+- Protected routes
+- Role-based access
+- Persistent user sessions
 
-### Professional Counselling
+![ParentSphere Login Page](docs/screenshots/02-login-page.png)
 
-- Search counsellors
-- Filter by specialization and availability
-- View professional profiles
-- Check consultation fees and experience
-- Select appointment dates
-- Choose available time slots
-- Add consultation notes
-- Track appointments
-- Meeting link generation
+---
 
-### Payment Integration
+## 📊 Personalized Parent Dashboard
 
-- Razorpay payment integration
-- Secure payment signature verification
-- Payment status tracking
-- Demo payment mode for offline project demonstrations
+After authentication, parents receive access to a personalized dashboard that provides a centralized overview of their activities across the platform.
 
-### Digital Resource Library
+The dashboard displays:
 
-- Parenting e-books
-- Child development resources
-- Book search functionality
-- Category-based filtering
-- Save and bookmark resources
-- Online reading and download support
+- Number of children being tracked
+- Upcoming counselling appointments
+- Payment information
+- Saved books
+- Child growth overview
+- Quick access to the AI assistant
 
-### Articles & Educational Content
+![ParentSphere Parent Dashboard](docs/screenshots/03-parent-dashboard.png)
 
-- Parenting articles
-- Category-based content organization
-- Likes and comments
-- Admin content publishing
-- Educational resources for different parenting stages
+---
 
-### Community Forum
+## 👩‍⚕️ Professional Counsellor Discovery
 
-- Create community posts
+ParentSphere allows parents to explore professional counsellors based on their parenting and child development requirements.
+
+### Counsellor Features
+
+- Professional counsellor profiles
+- Specialization information
+- Experience details
+- Ratings and reviews
+- Counselling fees
+- Online, offline, and hybrid modes
+- Search functionality
+- Specialization filters
+- Appointment integration
+
+![ParentSphere Counsellors](docs/screenshots/04-counsellors-page.png)
+
+---
+
+## 📚 Parenting E-Book Library
+
+The integrated e-book library provides educational resources across multiple parenting and child development categories.
+
+### Book Categories
+
+- Parenting
+- Child Psychology
+- Emotional Intelligence
+- Child Nutrition
+- Education
+- Communication Skills
+
+Users can search for books, filter resources by category, read available content, and save useful books.
+
+![ParentSphere Books Library](docs/screenshots/05-books-library.png)
+
+---
+
+## 📰 Parenting Articles
+
+The article section provides practical educational content covering important parenting and child development topics.
+
+### Article Categories
+
+- Child Growth
+- Parenting Tips
+- Education
+- Technology
+- Health
+
+The platform supports searchable and categorized content to help users quickly discover relevant information.
+
+![ParentSphere Articles](docs/screenshots/06-articles-page.png)
+
+---
+
+## 💬 Community Forum
+
+ParentSphere includes a community discussion platform where parents can interact and share their experiences.
+
+### Community Features
+
+- Create discussion posts
 - Ask parenting questions
-- Share experiences
-- Comment on discussions
-- Like helpful content
-- Community interaction
+- Share personal experiences
+- Select discussion categories
+- Like useful discussions
+- Comment on community posts
+- Learn from other parents
 
-### Video Resource Center
+![ParentSphere Community Forum](docs/screenshots/07-community-forum.png)
+
+---
+
+## 🎥 Video Resource Center
+
+The video resource center provides structured multimedia content for parents.
+
+### Available Resources
 
 - Parenting courses
-- Child-development videos
-- Educational content
-- Webinar resources
+- Child development videos
+- Educational webinars
+- Beginner-level resources
+- Intermediate-level resources
+- Advanced learning content
 
-### Analytics & Administration
-
-- User analytics
-- Appointment statistics
-- Revenue monitoring
-- Counsellor management
-- Resource management
-- Book management
-- Administrative dashboards
-
-### Email Notifications
-
-- Registration notifications
-- Email verification
-- Password reset emails
-- Appointment notifications
-- Booking confirmation
-- Payment notifications
-
-### Security
-
-- JWT authentication
-- Password hashing
-- Helmet security middleware
-- API rate limiting
-- XSS protection
-- MongoDB sanitization
-- Input validation
-- Secure payment signature verification
-- Environment-based secret management
+![ParentSphere Video Resources](docs/screenshots/08-video-resources.png)
 
 ---
 
-## Technology Stack
+## 📈 Child Growth Tracker
 
-| Category | Technologies |
-| --- | --- |
-| Frontend | React.js, Vite, Tailwind CSS |
-| Backend | Node.js, Express.js |
-| Database | MongoDB, Mongoose |
-| Authentication | JWT, Access Tokens, Refresh Tokens |
-| Artificial Intelligence | OpenAI API, Built-in Fallback Assistant |
-| Payments | Razorpay |
-| Email Services | Nodemailer |
-| Data Visualization | Interactive Growth Charts |
-| Security | Helmet, Rate Limiting, XSS Protection, MongoDB Sanitization |
-| Development Tools | Git, GitHub, VS Code, npm |
+The Child Growth Tracker enables parents to create child profiles and monitor important development information.
+
+### Tracked Information
+
+- Child name
+- Age
+- School grade
+- Height
+- Weight
+- Interests
+- Behaviour observations
+
+Growth information is presented through visual charts to help parents monitor changes over time.
+
+![ParentSphere Child Growth Tracker](docs/screenshots/09-child-growth-tracker.png)
 
 ---
 
-## System Architecture
+## 🤖 AI-Powered Parenting Assistant
 
-ParentSphere AI follows a modern full-stack architecture:
+One of the major features of ParentSphere is its AI-powered parenting assistant.
+
+The assistant provides contextual guidance for common parenting questions and challenges.
+
+Parents can ask questions related to:
+
+- Child behaviour
+- Study habits
+- Emotional regulation
+- Healthy routines
+- Nutrition
+- School activities
+- Parent-child communication
+- General parenting challenges
+
+The assistant can use selected child profile information to provide more relevant and personalized guidance.
+
+![ParentSphere AI Assistant](docs/screenshots/10-ai-parenting-assistant.png)
+
+---
+
+# ✨ Core Features
+
+| Feature | Description |
+|---|---|
+| 🔐 Secure Authentication | User registration and login system |
+| 👥 Role-Based Access | Support for parent, counsellor, and admin roles |
+| 📊 Parent Dashboard | Personalized overview of platform activities |
+| 🤖 AI Assistant | Context-aware parenting guidance |
+| 👶 Child Profiles | Create and manage child information |
+| 📈 Growth Tracking | Monitor child height and weight development |
+| 📉 Data Visualization | Visual representation of growth information |
+| 👩‍⚕️ Counsellor Discovery | Explore parenting and child development specialists |
+| 🔍 Search & Filtering | Find counsellors and resources efficiently |
+| 📅 Appointments | Book and manage counselling sessions |
+| 💳 Payments | Maintain counselling payment information |
+| 📚 E-Book Library | Access parenting and educational resources |
+| 📰 Articles | Explore practical parenting content |
+| 💬 Community Forum | Create posts and interact with other parents |
+| 🎥 Video Resources | Access courses, webinars, and development videos |
+| ☁️ Cloud Database | Persistent MongoDB Atlas data storage |
+| 🌐 REST APIs | Communication between frontend and backend |
+| 🚀 Cloud Deployment | Independently deployed frontend and backend |
+
+---
+
+# 🏗️ System Architecture
 
 ```text
-                          ParentSphere AI
-                                 |
-          +----------------------+----------------------+
-          |                                             |
-     React Frontend                               Express Backend
-     Vite + Tailwind                                  Node.js
-          |                                             |
-          |                                     RESTful API Layer
-          |                                             |
-          +----------------------+----------------------+
-                                 |
-              +------------------+------------------+
-              |                  |                  |
-           MongoDB          AI Services        External Services
-          Mongoose          OpenAI API         Razorpay Payment
-                                |              Nodemailer Email
-                         Fallback Engine
-```
-
-For detailed architecture documentation, see:
-
-`docs/ARCHITECTURE.md`
-
----
-
-## Core Application Workflow
-
-```text
-User Registration / Login
-           |
-           v
-     JWT Authentication
-           |
-           v
-     Role Identification
-           |
-     +-----+------+-------------+
-     |            |             |
-   Parent     Counsellor      Admin
-     |            |             |
-     v            v             v
- Dashboard    Dashboard     Analytics
-     |
-     +------------------------------+
-     |              |               |
-     v              v               v
- AI Assistant   Child Tracker   Resources
-     |              |               |
-     +--------------+---------------+
-                    |
-                    v
-             Find Counsellor
-                    |
-                    v
-             Select Time Slot
-                    |
-                    v
-              Make Payment
-                    |
-                    v
-           Booking Confirmation
-                    |
-                    v
-             Meeting Access
+                         ┌──────────────────────────┐
+                         │          USER            │
+                         │       Web Browser        │
+                         └────────────┬─────────────┘
+                                      │
+                                      │ HTTPS
+                                      ▼
+                         ┌──────────────────────────┐
+                         │      REACT FRONTEND      │
+                         │                          │
+                         │     Vite + React.js      │
+                         │     Hosted on Vercel     │
+                         └────────────┬─────────────┘
+                                      │
+                                      │ REST API Requests
+                                      │ JSON Responses
+                                      ▼
+                         ┌──────────────────────────┐
+                         │      NODE.JS BACKEND     │
+                         │                          │
+                         │       Express.js         │
+                         │      REST API Layer      │
+                         │     Hosted on Render     │
+                         └────────────┬─────────────┘
+                                      │
+                                      │ Mongoose ODM
+                                      ▼
+                         ┌──────────────────────────┐
+                         │      MONGODB ATLAS       │
+                         │                          │
+                         │   Cloud Database Layer   │
+                         │   Persistent Data Store  │
+                         └──────────────────────────┘
 ```
 
 ---
 
-## Project Structure
+# 🛠️ Technology Stack
+
+## 💻 Frontend
+
+| Technology | Purpose |
+|---|---|
+| React.js | Component-based user interface |
+| Vite | Frontend development and build tool |
+| JavaScript | Application functionality |
+| HTML5 | Application structure |
+| CSS3 | Styling and responsive design |
+| REST API Integration | Frontend-backend communication |
+
+---
+
+## ⚙️ Backend
+
+| Technology | Purpose |
+|---|---|
+| Node.js | JavaScript runtime environment |
+| Express.js | Backend framework and REST API development |
+| Mongoose | MongoDB Object Data Modeling |
+| JWT | Authentication and authorization |
+| Middleware | Request validation and route protection |
+
+---
+
+## 🗄️ Database
+
+| Technology | Purpose |
+|---|---|
+| MongoDB | NoSQL database |
+| MongoDB Atlas | Cloud database hosting |
+| Mongoose ODM | Schema design and database interaction |
+
+---
+
+## ☁️ Deployment & Development Tools
+
+| Technology | Purpose |
+|---|---|
+| Vercel | Frontend deployment |
+| Render | Backend deployment |
+| MongoDB Atlas | Cloud database infrastructure |
+| Git | Version control |
+| GitHub | Source code management |
+| VS Code | Development environment |
+
+---
+
+# 🗄️ Database Architecture
+
+ParentSphere uses multiple MongoDB collections to provide modular and scalable data management.
+
+```text
+MongoDB Atlas
+│
+└── parentsphere
+    │
+    ├── users
+    │
+    ├── children
+    │
+    ├── counsellors
+    │
+    ├── appointments
+    │
+    ├── payments
+    │
+    ├── books
+    │
+    ├── articles
+    │
+    ├── videos
+    │
+    ├── forumposts
+    │
+    ├── aichats
+    │
+    ├── testimonials
+    │
+    ├── newsletters
+    │
+    └── contactmessages
+```
+
+---
+
+# 📂 Project Structure
 
 ```text
 Parentsphere/
 │
-├── backend/
-│
 ├── client/
 │
 ├── docs/
+│   │
 │   ├── screenshots/
-│   │   ├── ai-assistant.png
-│   │   ├── appointment-booking.png
-│   │   ├── appointments-dashboard.png
-│   │   ├── booking-confirmation.png
-│   │   ├── books-library.png
-│   │   ├── child-tracker.png
-│   │   ├── community-forum.png
-│   │   ├── counsellors.png
-│   │   ├── home.png
-│   │   └── parent-dashboard.png
+│   │   ├── 01-home-page.png
+│   │   ├── 02-login-page.png
+│   │   ├── 03-parent-dashboard.png
+│   │   ├── 04-counsellors-page.png
+│   │   ├── 05-books-library.png
+│   │   ├── 06-articles-page.png
+│   │   ├── 07-community-forum.png
+│   │   ├── 08-video-resources.png
+│   │   ├── 09-child-growth-tracker.png
+│   │   └── 10-ai-parenting-assistant.png
 │   │
 │   ├── API.md
 │   └── ARCHITECTURE.md
 │
 ├── frontend/
+│   │
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   └── ...
+│   │
+│   ├── public/
+│   ├── package.json
+│   └── vite.config.js
 │
 ├── server/
+│   │
+│   ├── config/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── seed/
+│   ├── src/
+│   ├── utils/
+│   ├── app.js
+│   ├── server.js
+│   └── package.json
 │
-├── .env.example
 ├── .gitignore
 ├── package.json
-├── package-lock.json
 └── README.md
 ```
 
 ---
 
-## Getting Started
+# ⚙️ Getting Started
 
-### Prerequisites
+Follow the instructions below to run ParentSphere locally.
 
-Before running the project, make sure the following software is installed:
+## 1️⃣ Clone the Repository
 
-- Node.js
-- npm
-- MongoDB
-- Git
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
+
+Navigate to the project directory:
+
+```bash
+cd Parentsphere
+```
 
 ---
 
-## Installation
+## 2️⃣ Install Project Dependencies
 
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/aman1660-coder/ParentSphere-AI.git
-```
-
-### 2. Navigate to the Project Directory
-
-```bash
-cd ParentSphere-AI
-```
-
-### 3. Install Dependencies
+Install root dependencies:
 
 ```bash
 npm install
 ```
 
-### 4. Configure Environment Variables
-
-Create the required environment files using the provided example configuration.
-
-For the server:
+Install frontend dependencies:
 
 ```bash
-cp .env.example server/.env
+cd frontend
+npm install
 ```
 
-For the frontend:
+Install backend dependencies:
 
 ```bash
-cp .env.example frontend/.env
+cd ../server
+npm install
 ```
 
-Configure the required environment variables according to your development environment.
+---
 
-### 5. Seed the Database
+## 3️⃣ Configure Environment Variables
+
+Create a `.env` file inside the `server` directory.
+
+```env
+NODE_ENV=development
+
+PORT=5000
+
+CLIENT_URL=http://localhost:5173
+
+MONGODB_URI=your_mongodb_atlas_connection_string
+
+JWT_ACCESS_SECRET=your_secure_access_token_secret
+
+JWT_REFRESH_SECRET=your_secure_refresh_token_secret
+
+ACCESS_TOKEN_EXPIRES=15m
+
+REFRESH_TOKEN_EXPIRES=7d
+
+OPENAI_API_KEY=your_api_key_if_required
+
+RAZORPAY_KEY_ID=your_key_if_required
+
+RAZORPAY_KEY_SECRET=your_secret_if_required
+```
+
+> ⚠️ Never commit `.env` files, MongoDB credentials, JWT secrets, API keys, or payment credentials to GitHub.
+
+---
+
+## 4️⃣ Seed the Database
+
+ParentSphere includes a database seeding script that can populate the database with initial application content.
+
+Navigate to the server directory:
 
 ```bash
-npm run seed
+cd server
 ```
 
-### 6. Start the Application
+Run:
+
+```bash
+node seed/seed.js
+```
+
+Expected output:
+
+```text
+MongoDB connected successfully.
+
+Deleting existing counsellors, books, articles and videos...
+
+Adding new data...
+
+========================================
+DATABASE SEEDED SUCCESSFULLY
+========================================
+
+Counsellors: 6
+Books: 4
+Articles: 4
+Videos: 3
+
+========================================
+```
+
+---
+
+## 5️⃣ Start the Backend Server
+
+From the `server` directory:
 
 ```bash
 npm run dev
 ```
 
-Open the application in your browser:
+The development backend will run on:
+
+```text
+http://localhost:5000
+```
+
+---
+
+## 6️⃣ Start the Frontend
+
+Open another terminal and navigate to the frontend directory:
+
+```bash
+cd frontend
+```
+
+Run:
+
+```bash
+npm run dev
+```
+
+The frontend development server will run on:
 
 ```text
 http://localhost:5173
@@ -406,174 +612,239 @@ http://localhost:5173
 
 ---
 
-## Demo Accounts
+# 🔐 Security Implementation
 
-The application includes local seeded accounts for development and demonstration purposes.
+ParentSphere incorporates several application security practices:
 
-| Role | Email | Password |
-| --- | --- | --- |
-| Admin | admin@parentsphere.com | Admin@12345 |
-| Parent | parent@parentsphere.com | Parent@12345 |
-| Counsellor | counsellor@parentsphere.com | Counsellor@12345 |
-
-> **Note:** These credentials are intended only for local development and demonstration. Do not use these credentials in a production deployment.
+- JWT-based authentication
+- Password protection
+- Protected API routes
+- Authentication middleware
+- Role-based access control
+- Environment variable management
+- MongoDB Atlas authentication
+- CORS configuration
+- Frontend and backend service separation
+- Secure cloud database connectivity
 
 ---
 
-## MongoDB Configuration
+# 🌐 REST API Architecture
 
-For local development with MongoDB Compass:
+The frontend communicates with the Express backend using RESTful APIs.
+
+The API architecture handles operations related to:
 
 ```text
-mongodb://127.0.0.1:27017/parentsphere
+/api/auth
+/api/users
+/api/children
+/api/counsellors
+/api/appointments
+/api/payments
+/api/books
+/api/articles
+/api/videos
+/api/forum
+/api/ai
 ```
 
-For MongoDB Atlas, update `MONGODB_URI` in the server environment configuration and run:
+> For additional API information, see [`docs/API.md`](docs/API.md).
 
-```bash
-npm run seed
+---
+
+# 🚀 Deployment Architecture
+
+| Application Layer | Platform |
+|---|---|
+| Frontend | Vercel |
+| Backend | Render |
+| Database | MongoDB Atlas |
+| Source Code | GitHub |
+
+### Deployment Flow
+
+```text
+Developer
+    │
+    │ Git Push
+    ▼
+GitHub Repository
+    │
+    ├──────────────────────┐
+    │                      │
+    ▼                      ▼
+Vercel                  Render
+    │                      │
+    ▼                      ▼
+React Frontend       Node.js Backend
+                           │
+                           ▼
+                     MongoDB Atlas
 ```
 
----
+The React frontend communicates with the deployed backend through REST APIs.
 
-## Available Scripts
+The backend handles:
 
-```bash
-npm run dev
-```
+- Application business logic
+- Authentication
+- Authorization
+- Database operations
+- AI assistant functionality
+- Appointment management
+- User-generated content
 
-Starts the Express backend and Vite frontend concurrently.
-
-```bash
-npm run build
-```
-
-Creates a production build of the React frontend.
-
-```bash
-npm run start
-```
-
-Starts the Express API server.
-
-```bash
-npm run seed
-```
-
-Seeds the database with development and demonstration data.
+MongoDB Atlas provides persistent cloud-based storage for the application.
 
 ---
 
-## AI Configuration
+# 🎯 Problem Statement
 
-ParentSphere AI supports OpenAI integration for intelligent parenting guidance.
+Parents often depend on multiple disconnected platforms for:
 
-If `OPENAI_API_KEY` is configured, the application uses AI-powered responses for parenting assistance and child-development recommendations.
+- Professional counselling
+- Child development monitoring
+- Educational resources
+- Parenting guidance
+- Community discussions
+- Growth tracking
+- Appointment management
 
-If the API key is unavailable, ParentSphere uses a deterministic fallback assistant that generates practical guidance using the user's message and available child-profile context.
+This fragmentation makes it difficult for parents to maintain a centralized understanding of their child's development and quickly access relevant support.
 
-This enables the application to remain functional for offline demonstrations and development environments.
-
----
-
-## Payment Configuration
-
-ParentSphere AI integrates Razorpay for appointment payments.
-
-The payment system includes:
-
-- Payment initialization
-- Secure signature verification
-- Payment status management
-- Appointment confirmation
-- Demo payment support
-
-If Razorpay credentials are unavailable, the project supports a demonstration payment workflow for local development.
+**ParentSphere addresses this problem by creating an integrated digital parenting ecosystem where AI guidance, development tracking, professional support, learning resources, and community interaction are accessible through one unified platform.**
 
 ---
 
-## API Documentation
+# 💡 What Makes ParentSphere Different?
 
-Detailed API information is available at:
+ParentSphere goes beyond a traditional CRUD-based academic project.
 
-`docs/API.md`
+The application combines multiple real-world software development concepts, including:
 
----
+- Full-stack application development
+- Cloud database architecture
+- AI-assisted user interaction
+- Authentication and authorization
+- Role-based access control
+- Personalized user dashboards
+- Child development tracking
+- Data visualization
+- REST API development
+- Search and filtering
+- Community interaction
+- Professional service discovery
+- Appointment management
+- Cloud deployment
+- Independent frontend and backend infrastructure
 
-## Architecture Documentation
-
-Detailed information about the application architecture and data flow is available at:
-
-`docs/ARCHITECTURE.md`
-
----
-
-## Development Highlights
-
-This project demonstrates practical implementation of:
-
-- Full-stack MERN application development
-- RESTful API design
-- Artificial Intelligence integration
-- Context-aware AI assistance
-- Secure authentication and authorization
-- Role-Based Access Control
-- MongoDB database design
-- Payment gateway integration
-- Email notification systems
-- Interactive data visualization
-- Community-based application features
-- Security middleware implementation
-- Scalable frontend and backend architecture
+The project demonstrates the development and deployment of a complete software ecosystem rather than an isolated frontend or backend implementation.
 
 ---
 
-## Future Enhancements
+# 🧠 Key Technical Learnings
 
-- Real-time chat between parents and counsellors
-- Video consultation integration
-- Advanced AI conversation memory
-- Child growth percentile comparison
-- Mobile application development
-- Push notifications
-- Multi-language support
-- Advanced counsellor analytics
-- AI-powered resource recommendations
-- Personalized parenting learning paths
-- Cloud deployment and CI/CD integration
-- Automated testing and monitoring
+Developing ParentSphere involved working with:
 
----
-
-## Disclaimer
-
-ParentSphere AI is designed as a parenting support and educational platform. AI-generated guidance and platform resources are intended for informational purposes and should not replace professional medical, psychological, or emergency services.
-
----
-
-## Author
-
-**Aman Kumar Singh**
-
-Computer Science Engineering  
-Specialization in IoT, Cyber Security and Blockchain Technology
-
-GitHub: `aman1660-coder`
+- Full-stack MERN architecture
+- REST API design
+- React component architecture
+- State and user session management
+- JWT authentication
+- Protected application routes
+- MongoDB schema design
+- Mongoose models and relationships
+- Cloud database configuration
+- Environment variable management
+- CORS configuration
+- Frontend-backend integration
+- Production deployment
+- Database seeding
+- Debugging production API connectivity
+- Managing independently deployed application services
 
 ---
 
-## Support
+# 🔮 Future Enhancements
 
-If you find this project useful or interesting, consider giving the repository a star.
+Future development plans for ParentSphere include:
 
-Contributions, suggestions, and feedback are welcome.
+- 📹 Real-time video counselling
+- 💬 Live parent-counsellor chat
+- 📧 Email appointment notifications
+- 🔔 Real-time application notifications
+- 🧠 Advanced AI personalization
+- 📊 AI-based child development insights
+- 📈 Advanced parent analytics dashboard
+- 🤖 Personalized resource recommendation system
+- 🌍 Multi-language support
+- 📱 Dedicated mobile application
+- 📲 Progressive Web App support
+- 👨‍⚕️ Advanced counsellor dashboard
+- 🛡️ Expanded admin analytics and moderation tools
 
 ---
 
-<p align="center">
-  <strong>ParentSphere AI</strong>
-</p>
+# 👨‍💻 Developer
 
-<p align="center">
-  Empowering Parents. Supporting Children. Building Better Futures.
-</p>
+<div align="center">
+
+## Aman Kumar Singh
+
+### Computer Science Engineering Student
+
+**Specialization in IoT, Cyber Security and Blockchain Technology**
+
+<br>
+
+Interested in building applications using:
+
+`Full-Stack Development` • `Artificial Intelligence` • `Cyber Security` • `Blockchain` • `IoT` • `Cloud Technologies`
+
+<br>
+
+### 🌐 [View Live Project](https://parent-sphere-ai-frontend.vercel.app/)
+
+</div>
+
+---
+
+# 🤝 Contributing
+
+Contributions, suggestions, and feature requests are welcome.
+
+To contribute:
+
+1. Fork the repository.
+2. Create a new feature branch.
+3. Make your changes.
+4. Commit the changes.
+5. Push the branch.
+6. Open a Pull Request.
+
+---
+
+# ⭐ Support This Project
+
+If you found ParentSphere interesting or useful, consider giving the repository a ⭐.
+
+It helps support the project and its continued development.
+
+---
+
+<div align="center">
+
+# 👨‍👩‍👧‍👦 ParentSphere
+
+### Empowering Parents • Supporting Children • Building Better Futures
+
+<br>
+
+**Built with ❤️ by Aman Kumar Singh**
+
+<br>
+
+[![Launch ParentSphere](https://img.shields.io/badge/🚀_Launch_ParentSphere-Live_Application-7C3AED?style=for-the-badge)](https://parent-sphere-ai-frontend.vercel.app/)
+
+</div>
